@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
 import ForecastSummary from './forecast-summary';
 import ForecastSummaries from './forecast-summaries';
+import '../styles/app.css';
 
 const App = props => (
-  <div>
+  <div className="forecast">
     <LocationDetails
       city={props.location.city}
       country={props.location.country}
