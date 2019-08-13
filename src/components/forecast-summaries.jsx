@@ -14,7 +14,7 @@ const ForecastSummaries = props => (
               description={forecast.description}
             />
           ))
-          }
+    }
   </div>
 );
 
