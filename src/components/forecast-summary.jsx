@@ -5,7 +5,7 @@ const ForecastSummary = props => (
   <h1>
     <div className="date">{props.date}</div>
     <div className="temperature">{props.temperature}</div>
-    <div className="decription">{props.description}</div>
+    <div className="description">{props.description}</div>
     <div className="icon">{props.icon}</div>
   </h1>
 );
