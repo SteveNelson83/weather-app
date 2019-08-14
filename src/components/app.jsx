@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
-import ForecastSummary from './forecast-summary';
 import ForecastSummaries from './forecast-summaries';
 import '../styles/app.css';
+import ForecastDetails from './forecast-details';
 
 const App = props => (
   <div className="forecast">
@@ -12,12 +12,7 @@ const App = props => (
       country={props.location.country}
     />
     <ForecastSummaries forecasts={props.forecasts} />
-    <ForecastSummary
-      date={props.forecast.date}
-      temperature={props.forecast.temperature}
-      description={props.forecast.description}
-      icon={props.forecast.icon}
-    />
+    <ForecastDetails details={props.forecasts[0]} />
   </div>
 );
 
