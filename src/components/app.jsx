@@ -2,6 +2,7 @@ import React from 'react';
 import LocationDetails from './location-details';
 import ForecastSummaries from './forecast-summaries';
 import ForecastDetails from './forecast-details';
+import SearchBox from './search-box';
 import '../styles/app.css';
 
 
@@ -24,7 +25,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const url = 'https://mcr-codes-weather.herokuapp.com/forecast?city=manchester';
+    const url = 'https://mcr-codes-weather.herokuapp.com/forecast?city=Bristol';
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
@@ -45,6 +46,7 @@ class App extends React.Component {
           city={this.state.location.city}
           country={this.state.location.country}
         />
+        <SearchBox />
         <ForecastSummaries
           forecasts={this.state.forecasts}
           onForecastSelect={this.handleForecastSelect}
